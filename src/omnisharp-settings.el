@@ -1,5 +1,6 @@
 ;; this file contains settings that are used throughout the project
 
+;;;###autoload
 (defgroup omnisharp ()
   "Omnisharp-emacs is a port of the awesome OmniSharp server to
 the Emacs text editor. It provides IDE-like features for editing
@@ -8,6 +9,7 @@ instance that works in the background."
   :group 'external
   :group 'csharp)
 
+;;;###autoload
 (defcustom omnisharp-host "http://localhost:2000/"
   "Currently expected to end with a / character."
   :group 'omnisharp
@@ -48,6 +50,7 @@ options for fixing them."
   "This is shown at the top of the result buffer when
 there are ambiguous unresolved symbols after running omnisharp-fix-usings")
 
+;;;###autoload
 (defcustom omnisharp-code-format-expand-tab t
   "Whether to expand tabs to spaces in code format requests."
   :group 'omnisharp

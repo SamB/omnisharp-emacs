@@ -18,6 +18,7 @@ results of an auto-complete call.")
   "The header for the temporary buffer that is used to display the
 results of an auto-complete call.")
 
+;;;###autoload
 (defcustom omnisharp-auto-complete-popup-help-delay nil
   "The timeout after which the auto-complete popup will show its help
   popup. Disabled by default because the help is often scrambled and
@@ -26,6 +27,7 @@ results of an auto-complete call.")
   :type '(choice (const :tag "disabled" nil)
                  integer))
 
+;;;###autoload
 (defcustom omnisharp-auto-complete-popup-persist-help t
   "Whether to keep the help window (accessed by pressing f1 while the
 popup window is active) open after any other key is
@@ -39,6 +41,7 @@ pressed. Defaults to true."
   nil
   "Contains the last result of an autocomplete query.")
 
+;;;###autoload
 (defcustom omnisharp-auto-complete-want-documentation t
   "Whether to include auto-complete documentation for each and every
 response. This may be set to nil to get a speed boost for
@@ -47,6 +50,7 @@ completions."
   :type '(choice (const :tag "Yes" t)
                  (const :tag "No" nil)))
 
+;;;###autoload
 (defcustom omnisharp-auto-complete-want-importable-types nil
   "Whether to search for autocompletions in all available
 namespaces. If a match is found for a new namespace, the namespace is
@@ -54,7 +58,7 @@ automatically imported. This variable may be set to nil to get a speed
 boost for completions."
   :group 'omnisharp
   :type '(choice (const :tag "Yes" t)
-     (const :tag "No" nil)))
+                 (const :tag "No" nil)))
 
 (defvar omnisharp-auto-complete-popup-keymap
   (let ((keymap (make-sparse-keymap)))
@@ -96,6 +100,7 @@ information.")
   "The string used to visually separate functions/variables from
   their types")
 
+;;;###autoload
 (defcustom omnisharp-company-do-template-completion t
   "Set to t if you want in-line parameter completion, nil
   otherwise."
@@ -103,6 +108,7 @@ information.")
   :type '(choice (const :tag "Yes" t)
                  (const :tag "No" nil)))
 
+;;;###autoload
 (defcustom omnisharp-company-template-use-yasnippet t 
   "Set to t if you want completion to happen via yasnippet
   otherwise fall back on company's templating. Requires yasnippet
@@ -112,18 +118,21 @@ information.")
   :type '(choice (const :tag "Yes" t)
                  (const :tag "No" nil)))
 
+;;;###autoload
 (defcustom omnisharp-company-ignore-case t
   "If t, case is ignored in completion matches."
   :group 'omnisharp
   :type '(choice (const :tag "Yes" t)
                  (const :tag "No" nil)))
 
+;;;###autoload
 (defcustom omnisharp-company-strip-trailing-brackets nil
   "If t, strips trailing <> and () from completions."
   :group 'omnisharp
   :type '(choice (const :tag "Yes" t)
                  (const :tag "No" nil)))
 
+;;;###autoload
 (defcustom omnisharp-company-begin-after-member-access t
   "If t, begin completion when pressing '.' after a class, object
   or namespace"
@@ -131,18 +140,21 @@ information.")
   :type '(choice (const :tag "Yes" t)
                  (const :tag "No" nil)))
 
+;;;###autoload
 (defcustom omnisharp-company-sort-results t
   "If t, autocompletion results are sorted alphabetically"
   :group 'omnisharp
   :type '(choice (const :tag "Yes" t)
                  (const :tag "No" nil)))
 
+;;;###autoload
 (defcustom omnisharp-imenu-support nil
   "If t, activate imenu integration. Defaults to nil."
   :group 'omnisharp
   :type '(choice (const :tag "Yes" t)
                  (const :tag "No" nil)))
 
+;;;###autoload
 (defcustom omnisharp-eldoc-support t
   "If t, activate eldoc integration - eldoc-mode must also be enabled for
   this to work. Defaults to t."
@@ -150,6 +162,7 @@ information.")
   :type '(choice (const :tag "Yes" t)
                  (const :tag "No" nil)))
 
+;;;###autoload
 (defcustom omnisharp-company-match-type 'company-match-simple
   "Simple defaults to company's normal prefix matching (fast).
    Server allows the omnisharp-server to do the matching (slow but does fuzzy matching).
@@ -159,6 +172,7 @@ information.")
                  (const :tag "Server" 'company-match-server)
                  (const :tag "Flex" 'company-match-flx)))
 
+;;;###autoload
 (defcustom omnisharp-company-match-sort-by-flx-score nil
   "If omnisharp-company-match-type is 'company-match-flx', 
    set this to 't' to order search results by the flx match score"
